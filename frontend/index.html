@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    EduGenie - AI Learning Assistant
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/static/style.css"
+  >
+
+</head>
+
+
+<body>
+
+<header class="hero">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <div class="brand">
+        EduGenie 🧠
+      </div>
+
+      <h1>
+        Your personal AI tutor
+        for learning support.
+      </h1>
+
+      <p>
+        Ask questions, understand difficult topics,
+        summarize text, generate quizzes, and build
+        learning paths with Gemini.
+      </p>
+
+    </div>
+
+    <div
+      id="statusBadge"
+      class="status"
+    >
+      Checking AI...
+    </div>
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+
+  <!-- Q&A -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <span>💬</span>
+
+      <h2>
+        Ask EduGenie a Question
+      </h2>
+
+    </div>
+
+
+    <form
+      id="qaForm"
+      class="row-form"
+    >
+
+      <input
+        id="question"
+        type="text"
+        placeholder="e.g. Which is the largest ocean?"
+        required
+      >
+
+      <button type="submit">
+        Get Answer
+      </button>
+
+    </form>
+
+
+    <div
+      id="qaResult"
+      class="result hidden"
+    ></div>
+
+  </section>
+
+
+
+  <!-- Explanation -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <span>💡</span>
+
+      <h2>
+        Need an Explanation?
+      </h2>
+
+    </div>
+
+
+    <form
+      id="explainForm"
+      class="row-form"
+    >
+
+      <input
+        id="topic"
+        type="text"
+        placeholder="e.g. Quantum computing"
+        required
+      >
+
+      <button type="submit">
+        Explain
+      </button>
+
+    </form>
+
+
+    <div
+      id="explainResult"
+      class="result hidden"
+    ></div>
+
+  </section>
+
+
+
+  <!-- Summarization -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <span>📝</span>
+
+      <h2>
+        Summarize a Paragraph
+      </h2>
+
+    </div>
+
+
+    <form id="summaryForm">
+
+      <textarea
+        id="summaryText"
+        rows="7"
+        placeholder="Paste long content to summarize..."
+        required
+      ></textarea>
+
+
+      <button type="submit">
+        Summarize
+      </button>
+
+    </form>
+
+
+    <div
+      id="summaryResult"
+      class="result hidden"
+    ></div>
+
+  </section>
+
+
+
+  <!-- Quiz -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <span>❓</span>
+
+      <h2>
+        Generate a Quiz
+      </h2>
+
+    </div>
+
+
+    <form id="quizForm">
+
+      <textarea
+        id="quizText"
+        rows="6"
+        placeholder="Paste a lesson, notes, or paragraph here..."
+        required
+      ></textarea>
+
+
+      <div class="quiz-controls">
+
+        <label>
+
+          Questions
+
+          <select id="quizCount">
+
+            <option value="3">
+              3
+            </option>
+
+            <option value="4">
+              4
+            </option>
+
+            <option value="5">
+              5
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <button type="submit">
+          Generate Quiz
+        </button>
+
+      </div>
+
+    </form>
+
+
+    <div
+      id="quizResult"
+      class="result hidden"
+    ></div>
+
+  </section>
+
+
+
+  <!-- Learning Recommendations -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <span>🗺️</span>
+
+      <h2>
+        Get Learning Recommendations
+      </h2>
+
+    </div>
+
+
+    <form
+      id="recommendForm"
+      class="row-form"
+    >
+
+      <input
+        id="recommendTopic"
+        type="text"
+        placeholder="e.g. Linear Regression"
+        required
+      >
+
+      <button type="submit">
+        Get Recommendations
+      </button>
+
+    </form>
+
+
+    <div
+      id="recommendResult"
+      class="result hidden"
+    ></div>
+
+  </section>
+
+
+</main>
+
+
+<div
+  id="toast"
+  class="toast"
+></div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
